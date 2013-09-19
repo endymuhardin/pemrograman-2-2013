@@ -7,4 +7,17 @@ public class Mahasiswa {
     private String nama;
 
     private List<Hasil> daftarHasilKuliah;
+
+    // getter dan setter
+    public void setNpm(String x){
+        npm = x;
+    }
+
+    public String getNpm(){
+        return npm;
+    }
+
+    public void setNama(String nama){
+        this.nama = nama;
+    }
 }
