@@ -15,9 +15,6 @@ public class PegawaiDao {
             // file yang akan dibaca
             FileReader tarifCsv = new FileReader(namafile);
             
-            // setelah dibaca dan diproses, simpan di variabel daftarPegawai
-            List<Pegawai> daftarPegawai = new ArrayList<Pegawai>();
-            
             // Bungkus dengan BufferedReader, supaya bisa baca baris per baris
             BufferedReader reader = new BufferedReader(tarifCsv);
             
@@ -43,6 +40,7 @@ public class PegawaiDao {
             reader.close();
         } catch (Exception err){
             System.out.println("Gagal loading data pegawai");
+            err.printStackTrace();
         }
     }
     
